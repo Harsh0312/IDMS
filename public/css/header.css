@@ -1,0 +1,20 @@
+.app-header {
+    display:flex;
+    justify-content: space-between;
+    font-size: 42px;
+    background-color: white;
+    color: #242323;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+
+
+#app-header-btns {
+    align-content: center;
+    float: right;
+    display: inline-flex;
+  }
+  
+  #app-header-btns button {
+    margin-left: 0.25rem;
+  }

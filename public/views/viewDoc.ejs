@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>   
+    <script src="https://npmcdn.com/moralis@latest/dist/moralis.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity=
+        "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+
+        <script src = "../js/metlogout.js"></script> 
+
+        
+        <link rel="stylesheet" href="../css/index.css" type="text/css">
+        <link rel="stylesheet" href="../css/header.css" type="text/css">
+
+  </head>
+  <body>
+    <%- include('./includes/header.ejs') -%>
+    <a href="/index">Home</a>
+    
+    <input type="hidden" value="<%= contractAddr %>" id="contractAddr">
+    <section id="viewDocRequests" class="container"></section>
+    <form method="post" action="/ViewRequestDetail">
+    <table id="requestTable">
+      <tr>
+        <th>Institution Name</th>
+        <th>Chain Address</th>
+        <th>More Info</th>
+      </tr>
+    </table>
+  </form>
+    <script src = "../js/docRequests.js"></script>
+  </body>
+  </html>

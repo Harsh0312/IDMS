@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      
+    <script src="https://npmcdn.com/moralis@latest/dist/moralis.js"></script>
+    <script>
+        Moralis.initialize("mCSwkSAJpil0vP4GWCQskslXRRXJRRzD3nWh8FV9");
+        Moralis.serverURL = "https://k95vzhhakuri.moralisweb3.com:2053/server";
+        function checkLogin(){
+        let user = Moralis.User.current();
+        console.log(user);
+        if(!user){
+            window.location.href = "/login";
+            console.log("Here");
+
+        }
+        else{
+            console.log("there");
+            window.location.href = "/index";
+        }
+    }
+    </script>
+
+  </head>
+  <body onload="checkLogin()">
+    <!-- scripts -->
+    
+  </body>
+</html>

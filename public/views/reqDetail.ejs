@@ -24,17 +24,20 @@
         <script src = "../js/metlogout.js"></script>
 
         
-        
+        <link rel="stylesheet" href="../css/index.css" type="text/css">
         <link rel="stylesheet" href="../css/header.css" type="text/css">
 
-        <%- include('./includes/header.ejs') -%>
   </head>
   <body>
-    
+    <%- include('./includes/header.ejs') -%>
     <a href="/index">Home</a>
     
-    <section id="userdocs" class="container"></section>
+    <input type="hidden" value="<%= contractAddr %>" id="contractAddr">
+    <input type="hidden" value="<%= reqInd %>" id="ReqIndex">
+    <table id="requestDet">
+
+    </table>
+    <script src = "../js/docReqDetail.js"></script>
     
-    <script src = "../js/uploadActions.js"></script>
   </body>
   </html>

@@ -2,6 +2,18 @@
 <html lang="en">
   <head>
     
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>   
     <script src="https://npmcdn.com/moralis@latest/dist/moralis.js"></script>
 
@@ -10,21 +22,51 @@
         "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
         crossorigin="anonymous"></script>
         <script src = "../js/metlogout.js"></script>
-    <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <!-- <link rel="stylesheet" href="../css/ind.css" type="text/css"> -->
     <link rel="stylesheet" href="../css/header.css" type="text/css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="../css/dashboard.css" type="text/css">
 
-   <%- include('./includes/header.ejs') -%>
-   
-    <h1>
-      Hello <%= sess.user.username %>
-   </h1>
-    <a href="/profile">Edit/View Profile</a>
-    <a href="/updoc">Upload/View Document</a>
+
+    <%- include('./includes/header.ejs') -%>
+  </head>
+  <body class="tempind_img">
+
+   <div class="row">
+    <div class="column">
+        <div class="card" style="width:300px">
+            <img class="card-img-top" src="../media/img_avatar1.png" alt="Card image" width="200" height="266">
+            <div class="card-body">
+                <h4 class="card-title">Profile Settings</h4>
+                <!--neeche wala line juggad hai qki coode respond nhi karrah tha dont judge-->
+                <p class="card-text">Click the button below to Edit/View Profile &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+                <a href="/profile" class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card" style="width:300px">
+            <img class="card-img-top" src="../media/upload.svg" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title">Upload Documents</h4>
+                <p class="card-text">Click the button below to upload documents for verification</p>
+                <a href="/updoc" class="btn btn-primary">Upload</a>
+            </div>
+        </div>
+    </div>
     
     <% if(sess.user.doc_uploaded == "true"){ %>
-      <a href ="/viewDocReq">View Document Requests</a>
+      <div class="column">
+        <div class="card" style="width:300px">
+            <svg class="card-img-top" alt="Card image" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="266" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#3498db"><path d="M27.52,10.32v151.36h106.64c0.03982,0 -0.09738,-0.31948 -0.17469,-0.53078l9.43984,10.86422l28.57485,-34.41344h-17.2v-30.96h-10.32v-56.46437l-39.85563,-39.85563zM103.2,17.2l35.6161,34.4h-35.6161zM55.04,72.24h61.92v6.88h-61.92zM55.04,92.88h44.72v6.88h-44.72zM55.04,113.52h61.92v6.88h-61.92zM137.6,113.52h10.32v30.96h10.32l-14.81485,17.04547l-14.80812,-17.04547h8.98297z"></path></g></g></svg>
+            <div class="card-body">
+                <h4 class="card-title">Document Requests</h4>
+                <p class="card-text">Click the button below to check if you have any pending requests</p>
+                <a href="/viewDocReq" class="btn btn-primary">View</a>
+            </div>
+        </div>
+    </div>
     <% } %>
+    </div>
   </body>
 </html>

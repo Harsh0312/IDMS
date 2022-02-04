@@ -292,7 +292,7 @@ async function uploadfile(user,doctype,docnum,name,file){
   formContainer.innerHTML= rawFormComponent(user);
   
   // storing on ledger
-    const contractAddress = "0x3b6eBB8D2f693D3Be7Eed9b06636301b2a27653D";
+    const contractAddress = "0x3f251F51C8ff62cA780d268B1335620575fBEE7c";
     const web3 = await Moralis.enableWeb3();
     const contract = new web3.eth.Contract(ABIJSON, contractAddress);
     

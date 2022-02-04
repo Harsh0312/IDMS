@@ -1,4 +1,10 @@
 
-<div id="app-header" class="app-header">
-        <button id="app-header-btns" onclick="logOut()">Logout</button>
-</div>
+<nav class="navbar navbar-inverse">
+        <ul class="nav navbar-nav">
+            <!--iske andar homepage ka url de sakta hai ul tag ke andar-->
+            <li><a style="font-size:20px;">  Hello&nbsp;<%= sess.user.username %></a></li>
+        </ul>
+        <div id="app-header" class="app-header" style="margin-top: 20px;">
+            <div class="btn btn-light" id="app-header-btns" onclick="logOut()" style="font-size:23px;"><span class="glyphicon glyphicon-log-out">&nbsp;Logout</span></div>
+        </div>
+</nav>

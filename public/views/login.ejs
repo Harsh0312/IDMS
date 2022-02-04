@@ -10,31 +10,32 @@
         crossorigin="anonymous"></script>
     <script src = "../js/metlogin.js"></script>
 
-    <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
   </head>
   <body>
-    <div class="container login">
-        
-        <hr/>
-       
-        <div id="frm-login">
-          <div class="form-group">
-            <label for="email">User/Email</label>
-            <input type="text" id="email" name="email"/>
-          </div>
-          <div class="form-group">
-            <label for="pass">Password</label>
-            <input type="password" id="pass" name="pass"/>
-          </div>
-          <button id="btn-login-email" onclick="loginwithEmPass()">Submit</button>
-          </div>
-          
-          <hr/>
-          
-          <button id="btn-login-metamask" type="button" onclick="loginWithMetaMask()">Login/Signup With MetaMask</button>
-        
+    <div class="container-login">
+      <div class="logo"> <img src="../media/logo.jpg" alt=""> </div>
+      <div class="text-center mt-4 name"> Identity Management System Login </div>
 
-        </div>
+
+      <div id="frm-login">
+          <div class="form-group">
+              <label for="email">User/Email</label>
+              <input type="text" id="email" name="email" />
+          </div>
+          <div class="form-group">
+              <label for="pass">Password</label>
+              <input type="password" id="pass" name="pass" />
+          </div>
+          <button class="btn-login-email" id="btn-login-email" onclick="loginwithEmPass()">Submit</button>
       </div>
+
+
+
+      <button class="btn-login-meta mt-3" id="btn-login-metamask" type="button" onclick="loginWithMetaMask()">Login/Signup With MetaMask</button>
+
+
+  </div>
+  </div>
   </body>
 </html>

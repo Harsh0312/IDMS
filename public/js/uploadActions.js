@@ -52,7 +52,7 @@ async function uploadfile(user,doctype,docnum,name,file){
     })
     
     // storing on ledger
-    //   const contractAddress = "0x3b6eBB8D2f693D3Be7Eed9b06636301b2a27653D";
+    //   const contractAddress = "0x6b02fcaF31FE59f00a94dc57D0cdF0ad00f0399b";
     //   const web3 = await Moralis.enableWeb3();
     //   const contract = new web3.eth.Contract(ABIJSON, contractAddress);
       

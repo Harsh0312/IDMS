@@ -182,3 +182,4 @@ exports.updtReqDetail = (req,res,next)=>{
 exports.downloadMeta = (req,res,next)=>{
     res.render("downMeta",{metaLink:"https://metamask.io/download/"});
 }
+//i have added comment. to check how to publish a branch.
